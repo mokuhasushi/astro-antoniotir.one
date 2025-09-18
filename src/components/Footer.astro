@@ -1,0 +1,22 @@
+---
+import Social from './Social.astro'
+
+const contacts = [
+    {platform: "github", username:"mokuhasushi"}, 
+    {platform: "linkedin", username:"tironeantonio"}, 
+    {platform: "instagram", username:"antonio161803"},
+    {platform: "youtube", username: "donspazioanto"}
+]
+const skills = [1,2,3,4];
+---
+<style>
+    footer {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+</style>
+
+<footer>
+  {contacts.map((c)=><Social platform={c.platform} username={c.username}/>) }
+</footer>

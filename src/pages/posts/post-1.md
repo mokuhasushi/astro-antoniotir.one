@@ -1,27 +1,25 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'My First Blog Post'
-pubDate: 2022-07-01
+pubDate: 2025-09-18
 description: 'This is the first post of my new Astro blog.'
-author: 'Astro Learner'
+author: 'Antonio'
 image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'
 tags: ["astro", "blogging", "learning in public"]
 ---
-# My First Blog Post
 
-Published on: 2022-07-01
+Welcome to my _new blog_ about ~~learning Astro~~ everything! Here I will share my life journey, starting with the development of this website.
 
-Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
+## The Astro choice
 
-## What I've accomplished
+I spent the last couple of weeks researching several ways to develop and deploy a personal website, and I finally set my eyes on Astro. The getting started tutorial felt very smooth, included deployment on Netlify, and the technology in itself is simple to pick up. 
 
-1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
-
-2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
-
-3. **Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
+I know my weak spot is styling, but I found a nice Bootstrap like boostrap bundle, and I am going to try and use it for this website. 
 
 ## What's next
 
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+First, finalizing this blog and tutorial with styling. Then, updating my personal domain with the new deployment (goodbye S3 rendered markdown!). Then I'd love to advertise my dithering APIs with a dedicated area in the website. 
+
+Also, trying to post something every week should be a good motivator to keep on moving. Quality might vary largely, but continuos delivery should be a priority for a devops engineer ;)
