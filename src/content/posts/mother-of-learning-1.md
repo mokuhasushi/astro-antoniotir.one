@@ -4,8 +4,8 @@ pubDate: 2025-09-20
 description: 'My latest obsession is Web Novels.'
 author: 'Antonio'
 image:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'Paris, Texas dithered image'
+    url: 'https://storage.googleapis.com/public-antonio/mage-girl.jpg'
+    alt: 'AI generated, then dithered'
 tags: ["web-novel", "time-loop", "art"]
 ---
 

@@ -4,7 +4,7 @@ pubDate: 2025-09-18
 description: 'Publishing a simple dithering service using FastAPIs and Google Cloud.'
 author: 'Antonio'
 image:
-    url: 'https://docs.astro.build/assets/rose.webp'
+    url: 'https://storage.googleapis.com/public-antonio/Paris-texas.jpg'
     alt: 'Paris, Texas dithered image'
 tags: ["dithering", "art", "devops"]
 ---

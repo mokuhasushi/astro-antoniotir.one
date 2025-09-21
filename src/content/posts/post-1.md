@@ -4,7 +4,7 @@ pubDate: 2025-09-18
 description: 'This is the first post of my new Astro blog.'
 author: 'Antonio'
 image:
-    url: 'https://docs.astro.build/assets/rose.webp'
+    url: 'https://astro.build/assets/press/astro-logo-light-gradient.png'
     alt: 'The Astro logo on a dark background with a pink glow.'
 tags: ["astro", "blogging", "learning in public"]
 ---
