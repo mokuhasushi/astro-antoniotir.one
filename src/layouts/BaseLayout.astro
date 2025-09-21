@@ -1,24 +1,82 @@
 ---
 import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
-const { pageTitle}  = Astro.props;
+
+export interface Props {
+  pageTitle: string;
+  description?: string;
+  image?: string;
+}
+
+const { pageTitle, description = 'A terminal-inspired Astro theme', image } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/';
 ---
+
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <link rel="alternate icon" type="image/x-icon" href={`${base}favicon.ico`} />
     <meta name="generator" content={Astro.generator} />
+    
     <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    {image && <meta property="og:image" content={new URL(image, Astro.url)} />}
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    {image && <meta name="twitter:image" content={new URL(image, Astro.url)} />}
+    
+    <link rel="sitemap" href={`${base}sitemap-index.xml`} />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href={`${base}rss.xml`} />
   </head>
   <body>
-    <Header />
-    <h1>{pageTitle}</h1>
-    <slot />
-    <Footer />
-    <script>
-      import "../scripts/menu.js";
-    </script>
+    <div class="container center">
+      <Header />      
+      <main class="content">
+        <slot />
+      </main>
+      
+      <footer class="footer">
+        <div class="footer__inner">
+          <div class="copyright">
+            <span>© 2025 Powered by <a href="https://astro.build">Astro</a></span>
+            <span class="separator">::</span>
+            <span>Theme made by <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">panr</a></span>
+            <span class="separator">::</span>
+            <span>Ported by <a href="https://github.com/dennisklappe">Dennis Klappe</a></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+
   </body>
 </html>
+
+<style is:global>
+  /* Import all CSS files in the correct order */
+  @import "../styles/dark.css";
+  /* @import "../styles/global.css"; */
+  /* @import "../styles/terminal.css"; */
+  @import "../styles/main.css";
+  @import "../styles/header.css";
+  @import "../styles/menu.css";
+  @import "../styles/footer.css";
+  @import "../styles/buttons.css";
+  @import "../styles/post.css"; 
+  @import "../styles/pagination.css";
+  @import "../styles/code.css";
+  @import "../styles/syntax.css";
+  @import "../styles/gist.css";
+  @import "../styles/terms.css";
+</style>

@@ -1,7 +1,21 @@
 ---
+const base = "";
 ---
 <div class="hamburger">
     <span class="line"></span>
     <span class="line"></span>
     <span class="line"></span>
-  </div>
+  <ul class="menu menu--mobile">
+    <li class="menu__trigger">Menu ▾</li>
+    <li>
+      <ul class="menu__dropdown">
+        <li><a href={`${base}about/`}>About</a></li>
+        <li><a href={`${base}posts/showcase/`}>Showcase</a></li>
+        <li><a href={`${base}posts/`}>Posts</a></li>
+        <li><a href={`${base}tags/`}>Tags</a></li>
+        <li><a href={`${base}posts/rich-content/`}>Rich Content</a></li>
+        <li><a href={`${base}posts/code-blocks-examples/`}>Code Examples</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>

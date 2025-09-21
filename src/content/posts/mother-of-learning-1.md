@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Stuck in a time loop, again'
 pubDate: 2025-09-20
 description: 'My latest obsession is Web Novels.'
