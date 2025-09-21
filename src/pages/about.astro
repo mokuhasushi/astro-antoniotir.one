@@ -1,4 +1,5 @@
 ---
+import Social from '../components/Social.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = "About me";
@@ -10,46 +11,37 @@ const identity = {
   hobbies: ["filmmaking", "yoga", "manwha"],
 };
 
+const contacts = [
+{platform: "github", username:"mokuhasushi"}, 
+{platform: "linkedin", username:"tironeantonio"}, 
+{platform: "instagram", username:"antonio161803"},
+{platform: "youtube", username: "donspazioanto"}
+]
+
 const skills = ["python", "golang", "docker", "linux", "bass guitar", "marathon running"];
 
-const happy = true;
-const finished = false;
-const goal = 3;
-
-const skillColor = "navy";
-const fontWeight = "bold";
-const textCase = "uppercase";
 ---
 <BaseLayout pageTitle={pageTitle}>
-    <style is:global define:vars={{skillColor, fontWeight, textCase}}>
-        h1 {
-          color: purple;
-          font-size: 4rem;
-        }
-        .skill {
-            color: var(--skillColor);
-            font-weight: var(--fontWeight);
-            text-transform: var(--textCase);
-        }
-    </style>
+<p>
+    I spent year 2025 traveling and exploring a
+    new domain, documentary filmmaking.
+    This was a very formative time for me,
+    during which I developed confidence in
+    myself and resolved to be meaningful in my
+    actions.</p>
+    <p>
+    I am now looking for my next mission,
+    focusing my research on those that might
+    have a real impact on people lives.
+</p>
 
-    <p>Here are a few facts about me:</p>
-    <ul>
-      <li>My name is {identity.firstName}.</li>
-      <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-      {identity.hobbies.length >= 2 &&
-        <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
-      }
-    </ul>
-    <p>My skills are:</p>
-    <ul>
-      {skills.map((skill) => <li class="skill">{skill}</li>)}
-    </ul>
+    <h2>My contacts</h2>
+    {contacts.map((c)=><Social platform={c.platform} username={c.username}/>) }
 
-    {happy && <p>I am happy to be learning Astro!</p>}
+    <h2>About this website</h2>
 
-    {finished && <p>I finished this tutorial!</p>}
+    <p>Most of the file structure comes from the Astro standard template. <br>
+    Theme made by <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">panr</a>,
+    ported by <a href="https://github.com/dennisklappe">Dennis Klappe</a></p>
 
-    {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
 </BaseLayout>
-

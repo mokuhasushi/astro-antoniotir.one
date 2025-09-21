@@ -1,4 +1,5 @@
 ---
+import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 
 export interface Props {
@@ -46,17 +47,7 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
         <slot />
       </main>
       
-      <footer class="footer">
-        <div class="footer__inner">
-          <div class="copyright">
-            <span>© 2025 Powered by <a href="https://astro.build">Astro</a></span>
-            <span class="separator">::</span>
-            <span>Theme made by <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">panr</a></span>
-            <span class="separator">::</span>
-            <span>Ported by <a href="https://github.com/dennisklappe">Dennis Klappe</a></span>
-          </div>
-        </div>
-      </footer>
+    <Footer />
     </div>
     
 

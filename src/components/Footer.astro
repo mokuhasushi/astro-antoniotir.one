@@ -1,22 +1,15 @@
 ---
 import Social from './Social.astro'
 
-const contacts = [
-    {platform: "github", username:"mokuhasushi"}, 
-    {platform: "linkedin", username:"tironeantonio"}, 
-    {platform: "instagram", username:"antonio161803"},
-    {platform: "youtube", username: "donspazioanto"}
-]
 
 ---
-<style>
-    footer {
-      display: flex;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-</style>
 
-<footer>
-  {contacts.map((c)=><Social platform={c.platform} username={c.username}/>) }
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="copyright">
+      <span>© 2025 </span>
+      <span class="separator">::</span>
+      <span> Antonio Tirone</span>
+    </div>
+  </div>
 </footer>

@@ -44,7 +44,6 @@ h1 {
 }
   
 .nav-links a {
-    display: block;
     text-align: center;
     padding: 10px 0;
     text-decoration: none;
@@ -60,6 +59,10 @@ h1 {
   
 .expanded {
     display: unset;
+}
+
+.sausage {
+    display: none;
 }
   
 @media screen and (min-width: 636px) {
@@ -78,5 +81,9 @@ h1 {
   
   .hamburger {
     display: none;
+  }
+
+  .sausage {
+    display: inline-block;
   }
 }
