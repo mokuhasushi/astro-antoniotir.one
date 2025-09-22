@@ -1,6 +1,6 @@
 ---
 title: 'Stuck in a time loop, again'
-pubDate: 2025-09-20
+pubDate: 2025-09-22
 description: 'Up to chapter 50!'
 author: 'Antonio'
 image:

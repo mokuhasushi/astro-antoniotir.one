@@ -1,27 +1,42 @@
 ---
 import Hamburger from "./Hamburger.astro"
 import Navigation from "./Navigation.astro"
+import ThemeIcon from "./ThemeIcon.astro"
 
 ---
 
 <header class="header">
     <div class="header__inner">
+        <ThemeIcon />
         <a href="/">            
             <div class="logo">
               Antonio Tirone
             </div>
         </a>
-            <Hamburger />
-        
+        <!-- ugly! yet it works -->
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <Hamburger />
 
     </div>
-      <nav>
+    <nav>
         <Navigation />
     </nav>
     <script>
         // Menu functionality
         (() => {
-          const container = document.querySelector(".container");
           const menus = document.querySelectorAll(".menu");
           
           // Close menus when clicking outside
@@ -56,12 +71,6 @@ import Navigation from "./Navigation.astro"
                   menus.forEach(m => m.classList.remove("open"));
                   menu.classList.add("open");
                 }
-                
-                // // Adjust dropdown position if it goes outside container
-                // if (dropdown.getBoundingClientRect().right > container.getBoundingClientRect().right) {
-                //   dropdown.style.left = "auto";
-                //   dropdown.style.right = "0";
-                // }
               });
               
               dropdown.addEventListener("click", e => e.stopPropagation());

@@ -1,5 +1,5 @@
 ---
-title: 'Stuck in a time loop, again'
+title: 'Stuck in a time loop'
 pubDate: 2025-09-20
 description: 'My latest obsession is Web Novels.'
 author: 'Antonio'
