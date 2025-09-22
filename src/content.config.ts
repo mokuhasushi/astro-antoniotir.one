@@ -18,4 +18,20 @@ const posts = defineCollection({
   }),
 });
 
-export const collections = { posts };
+const experiences = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    startDate: z.coerce.date(),
+    endDate: z.coerce.date().optional(),
+    logo: z.string().optional(),
+    company: z.string().optional(),
+    institution: z.string().optional(),
+    url: z.string().optional(),
+    location: z.string().optional(),
+    tags: z.array(z.string()).default([]),
+  }),
+});
+
+export const collections = { posts, experiences };

@@ -1,0 +1,62 @@
+---
+import type { Render } from 'astro:content';
+import FormattedDate from './FormattedDate.astro';
+
+export interface Props {
+  exp: {
+    data: {
+      title: string;
+      description?: string;
+      startDate: Date;
+      endDate?: Date;
+      tags: string[];
+      logo?: string;
+      company?: string;
+      institution?: string;
+      url?: string;
+      location?: string;
+    }
+    render(): Render[".md"] 
+  };
+}
+
+const { exp } = Astro.props;
+const { Content } = await exp.render();
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/';
+---
+
+<article class="post on-list">
+  <h2 class="post-title">
+      {exp.data.title}
+  </h2>
+  <div class="post-meta">
+    <time class="post-date">
+      <FormattedDate date={exp.data.startDate} />
+    </time>
+    {exp.data.company && (
+      <span class="post-author">{exp.data.company}</span>
+    )}
+  </div>
+  {exp.data.tags && exp.data.tags.length > 0 && (
+    <span class="post-tags">
+      {exp.data.tags.map((tag, index) => (
+        <>
+          <a href={`${base}experiences/${tag}/`}>{tag}</a>{' '}
+        </>
+      ))}
+    </span>
+  )}
+  {exp.data.logo && (
+    <figure class="post-cover">
+      <img src={exp.data.logo} alt="Logo" max-width="400px"/>
+    </figure>
+  )}
+  {exp.data.description && (
+    <div class="post-content">
+      <p>{exp.data.description}</p>
+    </div>
+  )}
+  <div>
+    <Content />
+  </div>
+</article>

@@ -1,0 +1,50 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ExperienceCard from '../../components/ExperienceCard.astro';
+
+export async function getStaticPaths() {
+  const allExperiences = await getCollection('experiences');
+  const uniqueTags = [...new Set(allExperiences.map(e => e.data.tags).flat())];
+  
+  return uniqueTags.map(experience => {
+    const filteredPosts = allExperiences
+      .filter(e => e.data.tags?.includes(experience))
+      .sort((a, b) => b.data.startDate.valueOf() - a.data.startDate.valueOf());
+    return {
+      params: { experience },
+      props: { experiences: filteredPosts }
+    };
+  });
+}
+
+const { experience } = Astro.params;
+const { experiences } = Astro.props;
+---
+
+<BaseLayout pageTitle={`Experiences: ${experience}`} description={`All experiences tagged with "${experience}"`}>
+  <div class="posts">
+    <h1 class="posts-title">
+      <span style="color: var(--foreground)">Experiences for: <span style="color: var(--accent)">#{experience}</span></span>
+    </h1>
+    {experiences.length === 0 ? (
+      <p>No Experiences found with this tag.</p>
+    ) : (
+      experiences.map((e) => <ExperienceCard exp={e} />)
+    )}
+  </div>
+</BaseLayout>
+
+<style>
+  .posts-title {
+    color: var(--foreground);
+    margin-top: 0 !important;
+    margin-bottom: 30px !important;
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+  }
+  
+  .posts-title::after {
+    display: none !important;
+  }
+</style>
