@@ -4,7 +4,7 @@ pubDate: 2025-09-25
 description: 'Up to chapter 75'
 author: 'Antonio'
 image:
-    url: 'https://storage.googleapis.com/public-antonio/mage-girl.jpg'
+    url: 'https://storage.googleapis.com/public-antonio/blog-imgs/mage-girl.jpg'
     alt: 'AI generated, then dithered'
 tags: ["web-novel", "time-loop", "art", "spoilers"]
 ---
