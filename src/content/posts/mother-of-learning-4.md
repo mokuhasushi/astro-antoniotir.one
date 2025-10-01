@@ -34,4 +34,18 @@ I am kind of curious as to what would happen, but that would mean Zach death, so
 
 Final batter is starting, and I can feel the ending draw nearer! I do hope it won't be too long though, battles are well described and it is nice to see many familiar faces, but the scheming and setups is were the serialisation really excels. 
 
-Excited to see where this is going!
+---
+
+EDIT: only a few chapters where actually remaining, so
+
+## The END
+
+The final takeaway of this piece of art is: *mind magic rocks*.
+
+Big credit to the author in how almost everything ties up nicely. He gifted us a nice ending, without it being cheesy. 
+
+I must say, reading about the neverending learning path of the mc motivated me in picking up again some courses and new skills. So even though it is a light novel, it _had an impact_. 
+
+I only wish there was more necromancy involved, and the final battle was a bit too grand scale. Yes, red robe had a lot of time to prepare and etc, but him raising his skills to such an extent.. It was just to level him to his fellow time travelers, and a tad overpowered. 
+
+Now I am starting to look for my next read, maybe a normal book? I am already almost catch up with the manwha serialisations that were published in the last 2 weeks, so much for being a fast reader...
