@@ -6,7 +6,7 @@ author: 'Antonio'
 image:
     url: 'https://storage.googleapis.com/public-antonio/blog-imgs/mage-girl.jpg'
     alt: 'AI generated, then dithered'
-tags: ["web-novel", "time-loop", "art", "spoilers"]
+tags: ["web-novel", "time-loop", "art", "spoilers", "mother-of-learning"]
 ---
 
 This is not getting stale, but a bit more linear yes. 

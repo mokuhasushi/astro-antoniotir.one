@@ -6,7 +6,7 @@ author: 'Antonio'
 image:
     url: 'https://storage.googleapis.com/public-antonio/blog-imgs/mage-girl.jpg'
     alt: 'AI generated, then dithered'
-tags: ["web-novel", "time-loop", "art"]
+tags: ["web-novel", "time-loop", "art", "mother-of-learning"]
 ---
 
 For an extended period of time, let's say 5 years at least, I have been daily consuming tons of web comics. Korean ones specifically, also known as _manwhas_. Lately, after a couple of scan sites got shut down, I have reached saturation on the available series. Meaning I can tackle new ones, but they feel exactly as duplicata from previous ones, where the _craftman(wha)ship_ of writing a serie takes over with the actual artistic expression. 
