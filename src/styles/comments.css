@@ -1,0 +1,43 @@
+.container-form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    max-width: 864px;
+    min-height: 10vh;
+    margin: 0 auto;
+    border-right: 2px solid color-mix(in srgb, var(--accent) 10%, transparent);
+    border-bottom: 2px solid color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.comments-form-box {
+    display: flex;
+    padding-left: 10px;
+}
+
+.comments-form-input {
+    margin: 10px;
+    width: 100%;
+}
+
+.container-comments {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    max-width: 864px;
+    margin: 0 auto;
+    border-right: 2px solid color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.comment {
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.comment-name {
+    font-weight: bold;
+}
+.comment-date {
+    font-weight: 200;
+    font-style: italic;
+}

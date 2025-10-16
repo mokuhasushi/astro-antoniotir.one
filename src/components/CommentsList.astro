@@ -14,15 +14,15 @@ const comments = await db
     .orderBy(desc(Comment.createdAt));
 ---
 
-<div class="space-y-4">
+<div class="container-comments">
     {
         comments.map((comment) => (
-            <div class="p-4 bg-gray-50 rounded">
-                <div class="font-bold">{comment.name}</div>
-                <div class="text-gray-600 text-sm">
+            <div class="comment">
+                <div class="comment-name">{comment.name}</div>
+                <div class="comment-date">
                     {comment.createdAt.toLocaleDateString()}
                 </div>
-                <div class="mt-2">{comment.message}</div>
+                <div>{comment.message}</div>
             </div>
         ))
     }
