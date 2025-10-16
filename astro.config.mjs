@@ -7,10 +7,12 @@ import sitemap from "@astrojs/sitemap";
 
 import mdx from "@astrojs/mdx";
 
+import db from "@astrojs/db";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://antoniotir.one",
-  integrations: [preact(), sitemap(), mdx()],
+  integrations: [preact(), sitemap(), mdx(), db()],
   markdown: {
     shikiConfig: {
       themes: {

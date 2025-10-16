@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import PostLayout from '../../layouts/PostLayout.astro';
+import Comments from "../../components/Comments.astro";
 
 export async function getStaticPaths() {
   const posts = (await getCollection('posts'))
@@ -46,4 +47,5 @@ const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL :
       )}
     </div>
   </div>
+  <Comments postSlug={post.slug}/>
 </PostLayout>
