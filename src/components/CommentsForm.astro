@@ -11,50 +11,54 @@ const result = Astro.getActionResult(actions.addComment);
 const inputErrors = isInputError(result?.error) ? result.error.fields : {};
 ---
 
-<form method="POST" action={actions.addComment} class="mb-8">
+<form method="POST" action={actions.addComment} class="">
+<div class="container-form">
   <input type="hidden" name="postSlug" value="{postSlug}" />
 
-  <div class="mb-4">
-    <label for="name">Name:</label>
+  <div class="form-box">
+
     <input
       type="text"
       id="name"
       name="name"
-      required
-      class="w-full p-2 border rounded"
+      class="form-text"
+      placeholder="Your name. Optional."
     />
     {inputErrors.name &&
     <p class="text-red-500">{inputErrors.name}</p>
     }
-  </div>
 
-  <div class="mb-4">
-    <label for="email">Email:</label>
     <input
       type="email"
       id="email"
       name="email"
-      class="w-full p-2 border rounded"
+      class="form-text"
+      placeholder="Your email. Optional."
     />
     {inputErrors.email &&
     <p class="text-red-500">{inputErrors.email}</p>
     }
   </div>
 
-  <div class="mb-4">
-    <label for="message">Comment:</label>
+  <div class="form-box">
     <textarea
       id="message"
       name="message"
       required
-      class="w-full p-2 border rounded"
+      class="form-textarea"
+      placeholder="Something to say? Here's the place!"
     ></textarea>
     { inputErrors.message && (
     <p class="text-red-500">{inputErrors.message}</p>
     ) }
   </div>
 
-  <button type="submit" class="px-4 py-2 bg-purple-600 text-white rounded">
-    Add Comment
-  </button>
+  <div class="form-box">
+    <div class="form-box">
+        <button type="submit">
+      Add Comment
+    </button>
+    </div>
+  </div>
+</div>
 </form>

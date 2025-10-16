@@ -1,0 +1,29 @@
+.container-form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    max-width: 864px;
+    min-height: 10vh;
+    margin: 0 auto;
+    border-right: 2px solid color-mix(in srgb, var(--accent) 10%, transparent);
+    border-bottom: 2px solid color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.form-box {
+    display: flex;
+    padding-left: 10px;
+}
+
+.form-comment {
+    width: 100%;
+}
+
+.form-text {
+    margin: 10px;
+    width: 100%;
+}
+
+.form-textarea {
+    margin: 10px;
+    width: 100%;
+}

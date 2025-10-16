@@ -7,7 +7,7 @@ export const server = {
     accept: 'form',
     input: z.object({
       postSlug: z.string(),
-      name: z.string().min(1, 'Name is required'),
+      name: z.string().min(1, 'Name is optional').optional().default("Anonymous"),
       email: z.string().email('Valid email is optional').optional().default("none@none.none"),
       message: z.string().min(1, 'Comment cannot be empty'),
     }),
