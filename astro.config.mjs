@@ -9,10 +9,13 @@ import mdx from "@astrojs/mdx";
 
 import db from "@astrojs/db";
 
+import netlify from "@astrojs/netlify";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://antoniotir.one",
   integrations: [preact(), sitemap(), mdx(), db()],
+
   markdown: {
     shikiConfig: {
       themes: {
@@ -21,4 +24,6 @@ export default defineConfig({
       }
     },
   },
+
+  adapter: netlify(),
 });
