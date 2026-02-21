@@ -6,6 +6,6 @@ url: 'https://www.unimi.it/'
 startDate: 2016-09-07
 endDate: 2019-12-07
 description: 'Bachelor Degree in Computer science, graduated with 108/110'
-logo: ''
+logo: 'https://upload.wikimedia.org/wikipedia/commons/a/ad/Unimi-logo.png'
 tags: ["IT", "education"]
 ---
