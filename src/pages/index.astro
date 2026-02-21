@@ -1,10 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import YouTubeEmbed from "../components/YouTubeEmbed.astro";
+
 const pageTitle = "Home Page";
 ---
 <BaseLayout pageTitle={pageTitle}>
   <h2>Welcome!</h2>
-  <p>Feel free to read about me in the <a href="/about/">About</a> page, or 
+<p>
+  Feel free to read about me in the <a href="/about/">About</a> page, or 
   go through some random thought in the <a href="/posts/">Posts</a> area. 
+</p>
+
+<p>
+  If you are interested, here you can find my latest video:
+  <YouTubeEmbed id="I_9n8LQxiqY" title="Kozikhode Big Bazar" />
 </p>
 </BaseLayout>
