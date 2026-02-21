@@ -4,16 +4,6 @@ const thumbnail = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
 ---
 
 <style>
-.wrapper {
-  position: relative;
-  aspect-ratio: 16/9;
-  cursor: pointer;
-}
-.wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 .play {
   position: absolute;
   inset: 0;
@@ -25,7 +15,27 @@ const thumbnail = `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
 }
 </style>
 
-<div class="video-wrapper" onclick="this.innerHTML = `<iframe src='https://www.youtube.com/embed/${id}?autoplay=1' allow='autoplay; encrypted-media' allowfullscreen></iframe>`">
-  <img src={thumbnail} alt={title} loading="lazy" />
-  <div class="play">▶</div>
+<div class="video-wrapper" data-id={id}>
+    <img src={thumbnail} alt={title} loading="lazy" />
+    <div class="play">▶</div>
 </div>
+
+<script>
+document.addEventListener("click", (e) => {
+    if (!(e.target instanceof HTMLElement)) return;
+
+    const wrapper = e.target.closest(".video-wrapper");
+
+    if (!(wrapper instanceof HTMLElement)) return;
+    
+    const id = wrapper.dataset.id;
+
+    const iframe = document.createElement("iframe");
+    iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1`;
+    iframe.allow = "autoplay; encrypted-media";
+    iframe.allowFullscreen = true;
+
+    wrapper.innerHTML = "";
+    wrapper.appendChild(iframe);
+});
+</script>
