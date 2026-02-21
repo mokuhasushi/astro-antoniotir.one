@@ -7,7 +7,6 @@ import sitemap from "@astrojs/sitemap";
 
 import mdx from "@astrojs/mdx";
 
-import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,5 +21,4 @@ export default defineConfig({
     },
   },
 
-  adapter: netlify(),
 });
