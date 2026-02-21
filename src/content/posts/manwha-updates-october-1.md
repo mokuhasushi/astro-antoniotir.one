@@ -6,7 +6,7 @@ author: 'Antonio'
 image:
     url: 'https://storage.googleapis.com/public-antonio/blog-imgs/charoftheweek.jpg'
     alt: '..., dithered'
-tags: ["manwha", "art", ""]
+tags: ["manwha", "art"]
 ---
 
 I read *a lot* of manwhas. 
